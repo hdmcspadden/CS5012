@@ -1,0 +1,22 @@
+;; Object Ch10/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Ch10/"
+  :tables (list 
+   (semanticdb-table "ReadNums.java"
+    :major-mode 'jde-mode
+    :tags '(("java.io.BufferedReader" include nil nil [157 187]) ("java.io.FileReader" include nil nil [188 214]) ("java.io.IOException" include nil nil [215 242]) ("ReadNums" type (:typemodifiers ("public") :members (("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [295 308])) :type "void") (reparse-symbol class_member_declaration) [270 1423])) :type "class") nil [244 1426]))
+    :file "ReadNums.java"
+    :pointmax 1440
+    )
+   (semanticdb-table "ReadInts.java"
+    :major-mode 'jde-mode
+    :tags '(("java.util.*" include nil nil [1 20]) ("ReadInts" type (:typemodifiers ("public") :members (("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [149 162])) :type "void") (reparse-symbol class_member_declaration) [124 641])) :type "class") nil [96 644]))
+    :file "ReadInts.java"
+    :pointmax 657
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

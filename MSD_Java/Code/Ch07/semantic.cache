@@ -1,0 +1,79 @@
+;; Object ch07 Code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ch07 Code/"
+  :tables (list 
+   (semanticdb-table "BinaryTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "BinaryTree.java"
+    :pointmax 8258
+    )
+   (semanticdb-table "ArrayBasedBinaryTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "ArrayBasedBinaryTree.java"
+    :pointmax 15926
+    )
+   (semanticdb-table "Callback.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "Callback.java"
+    )
+   (semanticdb-table "BinaryTreeNode.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "BinaryTreeNode.java"
+    :pointmax 9162
+    )
+   (semanticdb-table "LinkedBinaryTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "LinkedBinaryTree.java"
+    :pointmax 7362
+    )
+   (semanticdb-table "BinarySearchTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "BinarySearchTree.java"
+    :pointmax 1503
+    )
+   (semanticdb-table "LinkedBinarySearchTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "LinkedBinarySearchTree.java"
+    :pointmax 6339
+    )
+   (semanticdb-table "BinarySearchTreeNode.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "BinarySearchTreeNode.java"
+    )
+   (semanticdb-table "TestBST.java"
+    :major-mode 'jde-mode
+    :tags '(("java.util.List" include nil nil [1 23]) ("java.util.ArrayList" include nil nil [24 51]) ("java.util.Collections" include nil nil [52 81]) ("TestBST" type (:typemodifiers ("public") :members (("N" variable (:typemodifiers ("public" "static" "final") :type "int") (reparse-symbol class_member_declaration) [110 141]) ("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [172 185])) :type "void") (reparse-symbol class_member_declaration) [147 730])) :type "class") nil [83 732]))
+    :file "TestBST.java"
+    :pointmax 733
+    )
+   (semanticdb-table "Heap.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "Heap.java"
+    :pointmax 1011
+    )
+   (semanticdb-table "ArrayBasedHeap.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "ArrayBasedHeap.java"
+    :pointmax 5341
+    )
+   (semanticdb-table "TestHeap.java"
+    :major-mode 'jde-mode
+    :tags '(("java.util.List" include nil nil [1 23]) ("java.util.ArrayList" include nil nil [24 51]) ("java.util.Collections" include nil nil [52 81]) ("TestHeap" type (:typemodifiers ("public") :members (("N" variable (:typemodifiers ("public" "static" "final") :type "int") (reparse-symbol class_member_declaration) [111 142]) ("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [173 186])) :type "void") (reparse-symbol class_member_declaration) [148 587])) :type "class") nil [83 589]))
+    :file "TestHeap.java"
+    :pointmax 590
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

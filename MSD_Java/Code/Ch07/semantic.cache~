@@ -1,0 +1,44 @@
+;; Object ch07 Code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ch07 Code/"
+  :tables (list 
+   (semanticdb-table "BinaryTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "BinaryTree.java"
+    :pointmax 8258
+    )
+   (semanticdb-table "ArrayBasedBinaryTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "ArrayBasedBinaryTree.java"
+    :pointmax 15568
+    )
+   (semanticdb-table "Callback.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "Callback.java"
+    )
+   (semanticdb-table "BinaryTreeNode.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "BinaryTreeNode.java"
+    :pointmax 9162
+    )
+   (semanticdb-table "LinkedBinaryTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "LinkedBinaryTree.java"
+    :pointmax 7362
+    )
+   (semanticdb-table "TestTree.java"
+    :major-mode 'jde-mode
+    :tags 'nil
+    :file "TestTree.java"
+    :pointmax 3436
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

@@ -1,0 +1,27 @@
+;; Object Ch13/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Ch13/"
+  :tables (list 
+   (semanticdb-table "DayTimeClient.java"
+    :major-mode 'jde-mode
+    :tags '(("java.io.BufferedReader" include nil nil [1 31]) ("java.io.InputStreamReader" include nil nil [32 65]) ("java.io.IOException" include nil nil [66 93]) ("java.net.Socket" include nil nil [95 118]) ("java.net.UnknownHostException" include nil nil [119 156]) ("DayTimeClient" type (:typemodifiers ("public") :members (("DAYTIME_PORT" variable (:typemodifiers ("static") :type "int") (reparse-symbol class_member_declaration) [321 350]) ("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [416 429])) :type "void") (reparse-symbol class_member_declaration) [391 1191])) :type "class") nil [287 1196]))
+    :file "DayTimeClient.java"
+    :pointmax 1214
+    )
+   (semanticdb-table "Resolver.java"
+    :major-mode 'jde-mode
+    :tags '(("java.net.InetAddress" include nil nil [1 29]) ("java.net.UnknownHostException" include nil nil [30 67]) ("Resolver" type (:typemodifiers ("public") :members (("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [222 235])) :type "void") (reparse-symbol class_member_declaration) [197 784])) :type "class") nil [168 787]))
+    :file "Resolver.java"
+    :pointmax 800
+    )
+   (semanticdb-table "UDPDayTimeServer.java"
+    :major-mode 'jde-mode
+    :tags '(("java.io.IOException" include nil nil [1 28]) ("java.net.DatagramPacket" include nil nil [30 61]) ("java.net.DatagramSocket" include nil nil [62 93]) ("java.net.SocketException" include nil nil [94 126]) ("java.util.Date" include nil nil [128 150]) ("UDPDayTimeServer" type (:typemodifiers ("public") :members (("MAX_PACKET_SIZE" variable (:typemodifiers ("public" "static") :type "int") (reparse-symbol class_member_declaration) [345 386]) ("main" function (:typemodifiers ("public" "static") :arguments (("args[]" variable (:type "String") (reparse-symbol formal_parameters) [417 430])) :type "void") (reparse-symbol class_member_declaration) [392 1891])) :type "class") nil [308 1894]))
+    :file "UDPDayTimeServer.java"
+    :pointmax 1916
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

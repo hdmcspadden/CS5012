@@ -1,0 +1,547 @@
+package chapter7;
+
+/**  
+ * A link based implementation of a binary tree.
+ */ 
+public class LinkedBinaryTree<T> implements BinaryTree<T> {
+    private BinaryTreeNode<T> root;    // The root of the tree
+    private BinaryTreeNode<T> cursor;  // The current node
+
+    /**
+     * Positions the cursor at the root of the tree.
+     *
+     * Preconditions:
+     *   None
+     *
+     * Postconditions:  	
+     *   If the tree is empty, the cursor is invalid.
+     *     Otherwise, the cursor refers to the root of the tree.
+     *   The tree structure is unchanged.
+     */ 
+    public void toRoot() {
+    	cursor = root;
+    }
+
+    /**
+     * Determine if the current node has a left child.
+     *
+     * Preconditions:
+     *   The cursor is valid.
+     *
+     * Postconditions:  	
+     *   The tree structure is unchanged.
+     *   The cursor is unchanged.
+     * 
+     * @return true if the node identified by the cursor has a left
+     *         child and false otherwise.
+     */ 	
+    public boolean hasLeftChild() {
+    	return cursor.getLeft() != null;
+    }
+
+    /**
+     * Determine if the current node has a right child.
+     *
+     * Preconditions:
+     *   The cursor is valid.
+     *
+     * Postconditions:  	
+     *   The tree structure is unchanged.
+     *   The cursor is unchanged.
+     * 
+     * @return true if the node identified by the cursor has a right
+     *         child and false otherwise.
+     */ 
+    public boolean hasRightChild() {
+    	return cursor.getRight() != null;
+    }
+
+    /**
+     * Determines if the current node has a parent.
+     *
+     * Preconditions:
+     *   The cursor is valid.
+     *
+     * Postconditions:  	
+     *   The tree structure is unchanged.
+     *   The cursor is unchanged.
+     * 
+     * @return true if the current node has a parent and false otherwise.
+     */ 
+    public boolean hasParent() {
+    	return root.findParent( cursor ) != null;
+    }
+
+    /**
+     * Determines if the cursor is on the tree.
+     *
+     * Preconditions:
+     *   None
+     *
+     * Postconditions:  	
+     *   The tree structure is unchanged.
+     *   The cursor is unchanged.
+     *
+     * @return true if the cursor is on the tree and false otherwise.
+     */ 	
+    public boolean isValid() {
+    	return cursor != null;
+    }
+
+    /**
+     * Positions the cursor at the current node's parent, if any.
+     *
+     * Preconditions:
+     *   The cursor is valid.
+     *
+     * Postconditions:  	
+     *   If the cursor has no parent (i.e. referred to the root node),
+     *     the cursor is invalid.  Otherwise, the cursor refers to its
+     *     previous referent's parent.
+     *   The structure of the tree is unchanged.
+     */ 	
+    public void toParent() {
+    	cursor = root.findParent( cursor );
+    }
+
+    /**
+     * Positions the cursor at the left child of the current node.
+     *
+     * Preconditions:
+     *   The cursor is valid.
+     *
+     * Postconditions:  	
+     *   If the left child of the current node is invalid, the cursor 
+     *     is invalid.  Otherwise, the cursor is changed to refer to
+     *     the left child of the current node.
+     *   The structure of the tree is unchanged.
+     */ 		
+    public void toLeftChild() {
+    	cursor = cursor.getLeft();
+    }
+
+    /**
+     * Positions the cursor at the right child of the current node.
+     *
+     * Preconditions:
+     *   The cursor is valid.
+     *
+     * Postconditions:  	
+     *   If the left child of the current node is invalid, the cursor 
+     *     is invalid.  Otherwise, the cursor is changed to refer to
+     *     the right child of the current node.
+     *   The structure of the tree is unchanged.
+     */ 		
+    public void toRightChild() {
+    	cursor = cursor.getRight();
+    }
+
+    /**
+     * Inserts the given data in the left child of the current node.
+     * If the cursor is null and the tree has no root, a new root
+     * node for the tree is created.
+     *
+     * Preconditions:
+     *   The tree is empty, or the cursor is valid and the left child is 
+     *	   empty.
+     *	
+     * Postconditions:  	
+     *   The cursor has not changed.
+     *   The size of the tree has increased by one.
+     *   No other structure of the tree has changed. 
+     *
+     * @param data the data to put in the left child.
+     */ 
+    public void insertLeft( T data ) {
+    	// Create the node that will hold the data
+    	BinaryTreeNode<T> newNode = new BinaryTreeNode<T>( data );
+
+		// If the tree is empty this becomes the only node in the
+		// tree, otherwise make the new node the left child of the
+		// cursor
+		if ( root == null ) {
+		    root = newNode;
+		}
+		else {
+		    cursor.setLeft( newNode );
+		}
+    }
+ 
+    /**
+     * Inserts the given data in the right child of the currrent node.
+     * If the cursor is null and the tree has no root, a new root
+     * node for the tree is created.
+     *
+     * Preconditions:
+     *   The tree is empty, or the cursor is valid and the right child is 
+     *	   empty.
+     *	
+     * Postconditions:  	
+     *   The cursor has not changed.
+     *   The size of the tree has increased by one.
+     *   No other structure of the tree has changed. 
+     *
+     * @param data the data to put in the right child.
+     */ 
+    public void insertRight( T data ) {
+		// Create the node that will hold the data
+		BinaryTreeNode<T> newNode = new BinaryTreeNode<T>( data );
+	
+		// If the tree is empty this becomes the only node in the
+		// tree, otherwise make the new node the left child of the
+		// cursor
+		if ( root == null ) {
+		    root = newNode;
+		}
+		else {
+		    cursor.setRight( newNode );
+		}
+    }
+
+    /**
+     * Return a reference to the data stored at the current node.
+     *
+     * Preconditions:
+     *   The cursor is on the tree.
+     *
+     * Postconditions:
+     *   The tree is unchanged.
+     *
+     * @return a reference to the data at the current node.
+     */
+    public T get() {
+    	return cursor.getData();
+    }
+
+    /**
+     * Set the data stored at the current node.
+     *
+     * Preconditions:
+     *   The cursor is on the tree.
+     *
+     * Postconditions:
+     *   The reference of the current node is changed.
+     *   The rest of the tree is unchanged.
+     *
+     * @param data the reference to store in the current node.
+     */
+    public void set( T data ) {
+    	cursor.setData( data );
+    }
+
+    /**
+     * Removes the subtree rooted at (including) the cursor.
+     *
+     * Preconditions:  
+     *   The cursor is on the tree
+     *
+     * Postconditions: 
+     *   The specified subtree has been removed.  If the cursor
+     *     referred to the root node, the tree is empty.
+     *   The tree's size has decreased.
+     *   No other structure of the tree has changed.
+     *   If the resulting tree is empty, the cursor is invalid.
+     *     Otherwise the cursor refers to the parent of the current 
+     *     node.
+     */
+    public void prune() {
+		// Are we trying to delete the root node?
+		if ( cursor == root ) {
+		    // Delete the root and invalidate the cursor
+		    root = null;
+		    cursor = null;
+		} else {
+		    // Find the parent of the node to delete
+		    BinaryTreeNode<T> parent = root.findParent( cursor );
+		    
+		    // Is it the parent's left child?
+		    if ( parent.getLeft() == cursor ) {
+		    	// Delete left child
+		    	parent.setLeft( null );
+		    } else {
+		    	// Delete right child
+		    	parent.setRight( null );
+		    }
+		    
+		    // Update the cursor
+		    cursor = parent;
+		}
+    }
+
+    /**
+     * Determines if the given object is identical to this one.
+     *  
+     * Preconditions:
+     *   None
+     *
+     * Postcondtions:
+     *   The cursors of both trees refer to the root of their
+     *     respective trees.
+     *
+     * @param o the Object to compare to
+     * 
+     * @return true if and only if all of the following are true:
+     *	         The other object is a BinaryTree
+     *		 The structure of the two trees are identical
+     *		 The data contained in corresponding nodes of the
+     *             two trees are identical.
+     */
+    public boolean equals( Object o ) {
+		boolean retVal = false;
+	
+		// We can only do the comparison if the other object is a tree
+		if ( o instanceof BinaryTree ) {
+		    BinaryTree other = (BinaryTree)o;
+		
+		    // Start at the top of both trees
+		    toRoot();
+		    other.toRoot();
+	
+		    // Use the recursive helper method to do the actual work
+		    retVal = equalHelper( other );
+	
+		    // Reset the iterators
+		    toRoot();
+		    other.toRoot();
+		}
+	
+		return retVal;
+    }
+    
+    /**
+     * Compare the content and structure of this tree to a second
+     * binary tree.
+     *
+     * @param tree the tree to compare this tree with
+     *
+     * @return true if the content and structure of a given tree is
+     *         identical to this tree and false otherwise.
+     */
+
+    private boolean equalHelper( BinaryTree<T> tree ) {
+		// Handle the case where both trees are empty.  If both
+		// trees are empty, they are equal.
+		boolean retVal = ( cursor == null && !tree.isValid() );
+	
+		// If both trees have something in them -- compare them
+		if ( cursor != null && tree.isValid() ) {
+	
+		    // Both nodes should have the same data and both
+		    // should have the same type of children
+		    retVal = cursor.getData().equals( tree.get() ) &&
+				     hasLeftChild() == tree.hasLeftChild() &&
+				     hasRightChild() == tree.hasRightChild();
+	
+		    // If they are equal and have left children - compare them
+		    if ( retVal && hasLeftChild() ) {
+				toLeftChild();
+				tree.toLeftChild();
+				retVal = equalHelper( tree );
+		
+				// Back up the cursors
+				toParent();
+				tree.toParent();
+		    }
+	
+		    // If they are equal and have right children - compare them
+		    if ( retVal && hasRightChild() ) {
+				toRightChild();
+				tree.toRightChild();
+				retVal = retVal && equalHelper( tree );
+				
+				// Back up the cursors
+				toParent();
+				tree.toParent();
+		    }
+		}
+	
+		return retVal;
+    } 
+    
+    /**
+     * Returns the number of nodes in this tree.
+     *
+     * Preconditions:  
+     * 	 None
+     * 
+     * Postconditions: 
+     * 	 The tree is unchanged.
+     *
+     * @return the number of nodes in the tree.
+     */
+    public int size() {
+		int size = 0;
+	
+		// If the root is null, the size of the tree is zero.  Otherwise, the
+		// size of the tree is the size of the root node.
+		if ( root != null ) {
+		    size = root.size();  
+		}
+	
+		return size;
+    }
+
+    /**
+     * Returns the height of the tree.
+     *
+     * Preconditions:  
+     *   None
+     * 
+     * Postconditions: 
+     *   The tree is unchanged.
+     *
+     * @return the height of the tree.
+     */
+    public int height() { 
+		int height = 0;
+		// If the root is null, the height of the tree is zero.  Otherwise, the
+		// height of the tree is the height of the root node.
+		if ( root != null ) {
+		    height = root.height();
+		}
+	
+		return height;
+    }
+
+    /**
+     * Position the cursor on the first (as seen by an inorder traversal) 
+     * occurrence of the given data.  Equality is determined by invoking
+     * the equals method.
+     * 
+     * Preconditions:  
+     * 	 Key is not null
+     *
+     * Postconditions: 
+     * 	 The tree is unchanged.
+     * 	 If key is found, cursor refers to the first instance thereof.  If key 
+     * 	   is not found, the cursor has moved off the tree from the last 
+     *     node, as seen by an inorder traversal.
+     *
+     * @param key object containing the data to be searched for.
+     */
+    public void find( T key) {
+		// If the root is null, there is no node containing the given key.
+		// Otherwise, check the tree rooted at the root node.
+		if (root != null) {
+		    cursor = root.find(key);
+		} else {
+		    cursor = null;
+		}
+    }	
+        
+     /**
+     * Perform a preorder traversal on this tree with the specified 
+     * callback object.
+     *
+     * Preconditions:
+     *   cb is not null
+     * 
+     * Postconditions:
+     *   The tree is unchanged.
+     *
+     * @param cb the callback object used to process each node.
+     */       
+    public void preOrder( Callback cb ) {
+		// Start the traversal at the root node
+		if ( root != null ) {
+		    root.preOrder( cb ); 
+		} 
+    }
+
+    /**
+     * Perform an inorder traversal on this tree with the specified 
+     * callback object.
+     *
+     * Preconditions:
+     *   cb is not null
+     * 
+     * Postconditions:
+     *   The tree is unchanged.
+     *
+     * @param cb the callback object used to process each node.
+     */    	  
+    public void inOrder( Callback cb ) { 
+		// Start the traversal at the root node
+		if ( root != null ) {
+		    root.inOrder( cb ); 
+		}
+    }
+    
+    /**
+     * Perform a postorder traversal on this tree with the specified 
+     * callback object.
+     *
+     * Preconditions:
+     *   cb is not null
+     * 
+     * Postconditions:
+     *   The tree is unchanged.
+     *
+     * @param cb the callback object used to process each node.
+     */    	
+    public void postOrder( Callback cb ) { 
+		// Start the traversal at the root node
+		if ( root != null ) {
+		    root.postOrder( cb ); 
+		}
+    }
+    
+    /**
+     * Return a string representation of this tree.  The string
+     * returned by this method will show the structure of the
+     * tree if the string is rotated 90 degrees to the right.
+     * 
+     * @return a string representation of this tree.
+     */
+
+    public String toString() {
+		StringBuffer retVal = new StringBuffer();
+	
+		// Get the string
+		treeToString( root, retVal, "" );
+	
+		// Convert the string buffer to a string
+		return retVal.toString();
+    }
+
+    /**
+     * A recursive method that does a RVL traversal of the tree
+     * to create a string that shows the contents and structure of
+     * the tree.
+     *
+     * For a tree that has the following structure:
+     *
+     *                      A
+     *                B           C
+     *            D       E
+     *
+     * This method will return the following string
+     *
+     *     C
+     * A
+     *         E
+     *     B
+     *         D
+     */
+
+    private void treeToString( BinaryTreeNode<T> cur, 
+			                   StringBuffer str,
+			                   String indent ) {
+
+		if ( cur != null ) {
+		    // Get the string representation of the right child.  Indent
+		    // is increased by 4 since this subtree is one level deeper in
+		    // the tree
+		    treeToString( cur.getRight(), str, indent + "    " );
+	
+		    // Convert the information in the current node
+		    str.append( indent );
+		    str.append( cur.getData().toString() );
+		    str.append( "\n" );
+	
+		    // Get the string representation of the left child.
+		    treeToString( cur.getLeft(), str, indent + "    " );
+		}
+    }
+    
+}

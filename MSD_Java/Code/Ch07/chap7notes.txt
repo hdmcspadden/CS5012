@@ -1,0 +1,23 @@
+Page 358 Figure 7.5 change private Object data; -> private T data; and thhe class definition to public class GTreeNode<T> {
+
+Page 373 Figure 7.10 consider changeing pre, in, and post order methods to accepts type java.lang.reflect.Method cb instead of type Callback 
+otherwise import javax.security.auth.callback.Callback; where needed since it gives errors w/o it.
+
+Page 375 Figure 7.12 change class description to public class BinaryTreeNde<T>{ and change private Object data; -> private T data
+
+Page 383 Figure 7.13 The code for BinaryTreeNode and LinkedBinaryTree are in two separate files (that i sent you), in the book they apprear in the same 
+blue box. If there is a way to show more separation between these two classes that would be good.
+
+<IMPORTANT>
+Page 389 Figure 7.13 - in my code I wans't sure how to make the equals method generic since it needs to override the equals method, making it anything 
+other than object causes an error. This seems tricky since I am keeping things as just BinaryTree in equals but equalsHelper needs a BinaryTree<T> type. 
+Let me know what you think about this one.
+This also goes for the BinaryTree, LinkedBinaryTree, ArrayBasedBinaryTree
+</IMPORTANT>
+
+Page 415 Figure 7.17 - since the BinarySearchTree interface doesn't reference Object, does the class need to be declared as public interace 
+BinarySearchTree<T> ? I think so, and the Comparable object will be generic. Along these same lines, check the compareTo method of 
+BinarySearchTreeNode and LinkedBinarySearchTree to see if the casting is how you would do it.
+
+Page 441 Figure 7.34 - I can't find the code for this, the insertHeapNode. I don't have the code for the getSmallest method either on the next page. 
+Let me know if you have it, if you need me to I will type it up again if it is lost.

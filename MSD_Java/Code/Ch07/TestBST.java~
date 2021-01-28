@@ -1,0 +1,31 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class TestBST {
+    public static final int N = 25;
+
+    public static void main( String args[] ) {
+	BinarySearchTree bst = new LinkedBinarySearchTree();
+	List numbers = new ArrayList();
+
+	for ( int i = 0; i < N; i = i + 1 ) {
+	    numbers.add( new Integer( i * 2 ) );
+	}
+
+	Collections.shuffle( numbers );
+
+	for ( int i = 0; i < numbers.size(); i = i + 1 ) {
+	    Integer num = (Integer)numbers.get( i );
+	    bst.insert( num );
+	}
+
+	System.out.println( bst );
+	System.out.println( "Size==" + bst.size() );
+	System.out.println( "Height=" + bst.height() );
+
+	for ( int i = 0; i < N * 2; i = i + 1 ) {
+	    System.out.println( i + "-->" + bst.contains( new Integer( i ) ) );
+	}
+    }
+}
