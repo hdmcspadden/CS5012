@@ -1,3 +1,9 @@
+'''
+With Dutch flag problem you have muny repeated values, and only one gets shifted at a time. Solution is to use n-way QuickSort:
+https://www.geeksforgeeks.org/3-way-quicksort-dutch-national-flag/ 
+'''
+
+
 def quickSort(A):
     return quickSort2(A, 0, len(A) - 1) # A, start index, low index
 
