@@ -4,7 +4,6 @@
 
 # Example with Base 10: https://big-o.io/algorithms/non-comparison/radix-sort/
 
-# THE CODE DOES NOT YET WORK
 '''
 Radix sort is an integer sorting algorithm that sorts data with integer keys by grouping the keys by individual digits 
 that share the same significant position and value (place value). Radix sort uses counting sort as a subroutine to sort an 
@@ -46,26 +45,20 @@ def counting_Sort(A, digit, radix):
         digit_of_Ai = math.floor((A[i]/radix**digit)%radix)       
         C[digit_of_Ai] = C[digit_of_Ai] + 1 # add to the running count
         #now C[i] is the value of the number of elements in A equal to i
-
-    print("C is : {}".format(C))
-
+    
     #here C is modifed to have the number of elements <= i
     for j in range(1,radix):
         C[j] = C[j] + C[j-1]
 
-    print("C is : {}".format(C))       
-
     #to count down (go through A backwards)
-    # this makes it NOT STABLE
     for m in range(len(A)-1, -1, -1): 
         digit_of_Ai = math.floor((A[m]/radix**digit)%radix)
-        print("digit_of_Ai: {}".format(digit_of_Ai))
-        print("pre C[digit_of_Ai]: {}".format(C[digit_of_Ai]))
-        C[digit_of_Ai] = C[digit_of_Ai] - 1
-        print("post C[digit_of_Ai]: {}".format(C[digit_of_Ai]))
+        C[digit_of_Ai] = C[digit_of_Ai] - 1 # this is the substraction step
+        # Stick the value from the input array into the correct place in the digit sorted array
+        B[C[digit_of_Ai]] = A[m] 
 
-        B[C[digit_of_Ai]] = A[m]
-        print("B[C[digit_of_Ai]]: {}".format(B[C[digit_of_Ai]]))
+
+    print("Current Sort for Digit {}: {}".format(digit,B))
 
     return B
 
@@ -83,10 +76,6 @@ def radix_sort(A, radix):
         output = counting_Sort(output,i,radix)
     return output
 
-#A = [9,3,1,4,5,7,7,2,20,55]
-#A = [10,1,100,8]
-#print(radix_sort(A,10))
-
-alist = [9,3,1,4,5,7,7,2,2,8,8,5,6]
-print("Demonstrate Counting Sort with: {}".format(alist))
-print(counting_Sort(alist,0,10))
+alist = [36,1,12,25,44,11,25]
+print("Demonstrate Radix Sort with: {}".format(alist))
+print(radix_sort(alist,10))

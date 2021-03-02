@@ -16,7 +16,7 @@ def countingSort(arr, exp1):
     # Store count of occurrences in count[] 
     for i in range(0, n): 
         index = (arr[i] / exp1) 
-        count[int(index % 10)] += 1
+        count[int(index % 10)] += 1 # increase the count of the number of elements at that place
   
     # Change count[i] so that count[i] now contains actual 
     # position of this digit in output array 
@@ -50,11 +50,10 @@ def radixSort(arr):
     exp = 1
     while max1 / exp > 0: 
         countingSort(arr, exp) 
-        exp *= 10
-  
-  
-# Driver code 
-arr = [170, 45, 75, 90, 802, 24, 2, 66] 
+        exp *= 10 
+        
+      
+arr = [36,1,12,25,44,11,25] 
 
 print("Input array: {}".format(arr))
 # Function Call 
