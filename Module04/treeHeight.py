@@ -11,6 +11,9 @@ class BinaryTree:
         self.root = root # identifying the root of the tree
 
     def getHeight(self, rootToUse):
+        if (rootToUse == None):
+            return 0
+
         if rootToUse.right and rootToUse.left:
              # get height of left node
             leftHeight = self.getHeight(rootToUse.left)
@@ -27,6 +30,8 @@ class BinaryTree:
         else:
             # height is 1 at a leaf, i.e. no children
             return 1 
+    
+    
 
     ''' 
     Internal Class Node
@@ -54,54 +59,56 @@ class BinaryTree:
         
         def getRight(self):
             return self.right
-        ## -------------- end of internal class Node --------------
+
+        # find function to determine if a value exists in a node or its subtree
+        def find(self, target):
+            if (self.val == target):
+                return True
+            elif(self.left == None and self.right == None):
+                # no children return False
+                return False
+            elif (target > self.val):
+                if (self.right):
+                    # go right
+                    return self.right.find(target)
+                else:
+                    return False
+            else:
+                if (self.left):
+                    # go left
+                    return self.left.find(target)
+                else:
+                    return False
+            # default return Flase
+            return False
+
         
   
     
 # create a bunch of nodes with integer values
-theRoot = BinaryTree.Node(3) # root node with value 3
-n1 = BinaryTree.Node(1)
-n2 = BinaryTree.Node(2)
-n4 = BinaryTree.Node(4)
-n5 = BinaryTree.Node(5)
-n6 = BinaryTree.Node(6)
+theRoot = BinaryTree.Node(30) # root node with value 3
+n20 = BinaryTree.Node(20)
+n10 = BinaryTree.Node(10)
+n25 = BinaryTree.Node(25)
+n23 = BinaryTree.Node(23)
+n27 = BinaryTree.Node(27)
+n40 = BinaryTree.Node(40)
+n33 = BinaryTree.Node(33)
 # create a binary tree called 'myTree'
 myTree = BinaryTree(theRoot) # create a tree 'myTree' with root = 3
-# connect the tree
-myTree.root.setLeft(n1)
-myTree.root.setRight(n4)
-n1.setRight(n2)
-n4.setRight(n6)
-n4.setLeft(n5)
-
-height = myTree.getHeight(theRoot)
-
-print(height)
+# connect the tree wihtout n33
+myTree.root.setLeft(n20)
+myTree.root.setRight(n40)
+n20.setLeft(n10)
+n20.setRight(n25)
+n25.setLeft(n23)
+n25.setRight(n27)
 
 
-# create the root node
-theRoot2 = BinaryTree.Node(3) 
-# create the other nodes
-nn1 = BinaryTree.Node(1) 
-nn2 = BinaryTree.Node(2) 
-nn11 = BinaryTree.Node(11) 
-nn5 = BinaryTree.Node(5) 
-nn6 = BinaryTree.Node(6) 
-nn9 = BinaryTree.Node(9) 
+# test getHeight
+#height = myTree.getHeight(theRoot)
+#print(height)
 
-# create the tree object 
-theTree2 = BinaryTree(theRoot2)
+# test find
+print(theRoot.find(33))
 
-# connect the tree 
-theTree2.root.setLeft(nn1) 
-theTree2.root.setRight(nn6) 
-
-nn1.setLeft(nn2) 
-nn1.setRight(nn11) 
-
-n6.setRight(nn9) 
-nn6.setLeft(nn5) 
-
-height2 = theTree2.getHeight(theRoot2)
-
-print(height2)

@@ -11,7 +11,7 @@ def merge(left_half, right_half):
             right_half.remove(right_half[0])
 
     result_lst += right_half if len(left_half) == 0 else left_half
-    #print("Current result list value : ", result_lst)
+    print("Current result list value : ", result_lst)
     return result_lst
 
 # Function for dividing an list and return final sorted list
@@ -30,7 +30,7 @@ def merge_sort(unsorted_list):
 
 
 def main():
-    lst = [8, 17, 3, 9]
+    lst = [6, 4, 1, 9, 7, 2, 8, 5]
     print("Initial Unsorted List:", lst)
     print("After Sorting:", merge_sort(lst))
 

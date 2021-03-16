@@ -31,10 +31,10 @@ else:
   print('did not find')
 '''
 
-str = 'XbZ'
+str = '3'
 
 
-match = re.search(r'X.Z', str)
+match = re.search(r'[^0–9]', str)
 if match:
   print('found', match.group()) ## 'found word:cat'
 else:
