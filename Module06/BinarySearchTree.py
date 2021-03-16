@@ -107,8 +107,7 @@ class BinarySearchTree:
             else:
                   return 1
 
-
-            
+       
 
   
       def inorder(self, node):  # Performing in-order tree traversal
@@ -126,17 +125,17 @@ class BinarySearchTree:
                   # print self value
                   print(node.data)
                   # go left 
-                  self.inorder(node.left)
+                  self.preorder(node.left)
                   # go right
-                  self.inorder(node.right)
+                  self.preorder(node.right)
 
 # ===================================================================
       def postorder(self, node):  # Performing post-order tree traversal
             if (node):
                   # go left 
-                  self.inorder(node.left)
+                  self.postorder(node.left)
                   # go right
-                  self.inorder(node.right)
+                  self.postorder(node.right)
                   # print self value
                   print(node.data)
               
@@ -151,6 +150,7 @@ tree = BinarySearchTree()
 treeEmpty = BinarySearchTree()  # Empty tree
 
 arr = [8,3,1,6,4,7,10,14,13]    # Array of nodes (data items)
+#arr = [4,5,67,32,100,99,3,8,11,50]
 for i in arr:                   # For each data item, build the Binary Search Tree
     tree.buildBST(i)
 
