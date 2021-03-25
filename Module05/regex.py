@@ -34,7 +34,7 @@ else:
 str = '3'
 
 
-match = re.search(r'[^0–9]', str)
+match = re.search(r'[^0-9]', str)
 if match:
   print('found', match.group()) ## 'found word:cat'
 else:
