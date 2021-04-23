@@ -1,0 +1,169 @@
+DELETED FROM INSTITUTION
+
+Alumni Association of the University of Virginia	University	Charlottesville	VA	Y	54
+
+
+American Association of University Professors	University	Washington	DC	Y	82
+
+Auburn Spirit Foundation	University	Auburn	AL	Y	159
+
+Barton College	Alumni Association	Wilson	NC	Y	179
+
+Bemidji State University Alumni Association 	Alumni Association	Bemidji	MN	Y	190
+
+Central Michigan University	Alumni Association	Mount Pleasant	MI	Y	322
+
+Chapman University	University	Orange	CA	Y	330
+
+Clayton State Alumni Association	Alumni Association	Morrow 	GA	Y	352
+
+Colby Sawyer College	University	New London	NH	Y	363
+
+College of West Africa Alumni Association USA	Alumni Association	Bowie	MD	Y	380
+
+Crimson Tide Sports Marketing, LLC	University	Tuscaloosa 	AL	Y	403
+
+Crimson Tide Sports Marketing, LLC	Other	Tuscaloosa	AL	Y	405
+
+Culver Stockton College	University	Canton	MO	Y	406
+
+
+Goshen College	University	Goshen 	IN	Y	559
+
+Hampden Sydney College	University	Hampden-Sydney	VA	Y	573
+
+Harvard Alumni Association	Alumni Association	Cambridge	MA	Y	583
+
+Indiana University of Pennsylvania Alumni Association	Alumni Association	Indiana	PA	Y	612
+
+Jacksonville State University Alumni Association	Alumni Association	Jacksonville	AL	Y	629
+
+Juilliard School	Other	New York	NY	Y	644
+
+Keystone College Parents	Other	La Plume	PA	Y	668
+
+Lambda Theta Phi	Other	Parsippany	NJ	Y	694
+
+Lock Haven University Alumni Association	Alumni Association	Lock Haven	PA	Y	720
+
+Marshall University Alumni Association	Alumni Association	Huntington	WV	Y	749
+
+Massachusetts Institute of Technology	Alumni Association	Cambridge	MA	Y	758
+
+Michigan Technological University a Michigan Constitutional University	Alumni Association, University	Houghton	MI	Y	779
+
+
+Morrisville College Foundaton	Alumni Association	Morrisville	NY	Y	814
+
+Mortar Board Inc.	University	Columbus 	OH	Y	816
+
+Mount St. Mary's University	University	Emmitsburg	MD	Y	823
+
+New England Institute of Technology	Alumni Association	Warwick	RI	Y	857
+
+New York University	University	New York	NY	Y	868
+
+Northeastern Illinois University	University	Chicago	IL	Y	895
+
+Northern Virginia Community College Educational Foundation	University	Annandale	VA	Y	908
+
+Norwich University	Alumni Association	Northfield	VT	Y	915
+
+Old Dominion University Alumni Association	Alumni Association	Norfolk	VA	Y	933
+
+Omicron Delta Kappa Society, Inc.	Other	Lexington	KY	Y	939
+
+Oswego Alumni Association	Alumni Association	Oswego	NY	Y	947
+
+Oxford Limited	University	Oxford	UK	Y	952
+
+PanIIT, Inc.	University	Cupertino	CA	Y	956
+
+Phi Delta Epsilon Medical Fraternity, Inc.	Other	Hollywood 	FL	Y	976
+
+Phi Mu	Other	Tucker	GA	Y	991
+
+Pi Kappa Alpha Corporation	Other	Memphis 	TN	Y	1004
+
+Pi Kappa Phi Foundation	Other	Charlotte	NC	Y	1007
+
+Providence College Alumni Association	Alumni Association	Providence 	RI	Y	1037
+
+Purdue Alumni Association	Alumni Association	West Lafayette	IN	Y	1041
+
+Rensselaer Polytechnic Institute Alumni Association	Alumni Association	Troy 	NY	Y	1062
+
+Rhode Island School of Design	University	Providence	RI	Y	1067
+
+Rhode Island School of Design	Other	Providence	RI	Y	1068
+
+Roger Williams University	University	Bristol 	RI	Y	1076
+
+Seton Hall University	University	South Orange	NJ	Y	1130
+
+South Dakota State University Alumni Association	Alumni Association	Brookings	SD	Y	1178
+
+St. John's University 	University	Jamaica	NY	Y	1228
+
+
+St. Lawrence University 	University	Canton	NY	Y	1231
+
+State University of Iowa Alumni Association	Alumni Association	Iowa City	IA	Y	1246
+
+Talmudic University	University	Miami Beach	FL	Y	1288
+
+Texas Tech Alumni Association	Alumni Association	Lubbock	TX	Y	1312
+
+The Kansas University Alumni Association	Alumni Association	Lawrence 	KS	Y	1372
+
+The King’s College	University	New York 	NY	Y	1374
+
+United States Naval Academy Alumni Association, Inc. 	Alumni Association	Annapolis	MD	Y	1491
+
+University of Mary Washington Alumni Association and University of Mary Washington Foundation 	Alumni Association, Foundation	Fredericksburg	VA	Y	1575
+
+University of Massachusetts Lowell	University	Lowell	MA	Y	1591
+
+University of North Dakota Alumni Association	Alumni Association	Grand Forks	ND	Y	1638
+
+University of Oregon Alumni Association, Inc.	Alumni Association	Eugene	OR	Y	1650
+University of Oregon Alumni Association, Inc. 	Alumni Association	Eugene	OR	Y	1651
+
+University of St. Thomas	University	Houston	TX	Y	1687
+
+University of Texas Medical School Houston Alumni Association	Alumni Association	Houston	TX	Y	1701
+
+University of the Sciences in Philadelphia 	University	Philadelphia	PA	Y	1710
+
+University of Vermont and State Agricultural  College	University	Burlington	VT	Y	1727
+
+University of West Florida Foundation Inc	Foundation	Pensacola	FL	Y	1733
+
+University of Wyoming Alumni Association	Alumni Association	Laramie	WY	Y	1766
+University of Wyoming Alumni Association	Alumni Association	Laramie 	WY	Y	1767
+
+University System of Maryland Foundation	Foundation	Adelphi 	MD	Y	1769
+
+Washburn University	University	Topeka	KS	Y	1801
+
+Wayne State University Alumni Association	Alumni Association	Detroit 	MI	Y	1815
+
+Weber State Alumni Association	Alumni Association	Ogden	VT	Y	1819
+
+West Chester University Alumni Association	Alumni Association	West Chester 	PA	Y	1828
+
+Western Oregon University Development Foundation	Foundation	Monmouth	OR	Y	1847
+
+Westfield State College Foundation, Inc.	Foundation	Westfield	MA	Y	1853
+
+Wichita State University Alumni Association, Inc.	Alumni Association	Wichita	KS	Y	1862
+
+Widener University	University	Chester 	PA	Y	1864
+
+Widener University School of Law	University	Chester	PA	Y	1866
+
+William Jewell College	University	Liberty 	MO	Y	1874
+
+William Paterson University Alumni Association	Alumni Association	Wayne	NJ	Y	1877
+
+Yale University	University	New Haven	CT	Y	1896

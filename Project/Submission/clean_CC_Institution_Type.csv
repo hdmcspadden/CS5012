@@ -1,0 +1,10 @@
+﻿inst_type_name,active_ind,display_order
+Alumni Association,Y,1
+"Alumni Association, Foundation",Y,2
+"Alumni Association, Foundation, Other",Y,3
+"Alumni Association, Other",Y,4
+"Alumni Association, University",Y,5
+Foundation,Y,6
+Other,Y,9
+University,Y,7
+"University, Other",Y,8
